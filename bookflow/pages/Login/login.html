@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>BookFlow</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../Login/index.html">Home</a></li>
+            <li><a href="../pages/Menu-livros/menu.html">Cadastrar Usuário</a></li>
+            <li><a href="../pages/Dashboard/dashboard.html">Cadastrar Livro</a></li>
+
+        </ul>
+    </nav>
+
+    <div id="containerCadastro">
+        <label for="inputNome">Nome:</label>
+        <input type="text" id="inputNome">
+
+        <label for="inputEmail">Email:</label>
+        <input type="email" id="inputEmail">
+
+        <label for="inputSenha">Senha:</label>
+        <input type="password" id="inputSenha">
+
+        <label for="inputPaginas">Páginas Lidas:</label>
+        <input type="number" id="inputPaginas">
+
+        <button onclick="cadastrarUsuario()">Cadastrar</button>
+        <div id="cadastroOk"></div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+
+</html>
