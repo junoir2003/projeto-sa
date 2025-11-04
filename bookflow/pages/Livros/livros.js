@@ -14,6 +14,6 @@ function cadastrarLivro(){
     }
 
     livros.push(novoLivro)
-   document.getElementById("cadastroOk").innerHTML = "Livro " + nomeLivro + " cadastrado com sucesso!"
+   document.getElementById("cadastroOk").innerHTML = "O " + autorLivro + "é: " + generoLivro 
 }
        
