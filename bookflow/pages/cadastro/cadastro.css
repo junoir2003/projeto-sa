@@ -1,0 +1,81 @@
+#containerCadastro {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  width: 300px;
+  margin: 50px auto;
+}
+
+#containerCadastro form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  width: 100%;
+}
+
+
+
+#containerCadastro input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+#containerCadastro button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+#containerCadastro button:hover {
+  background-color: gray;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+header {
+  background-color: #000000;
+  padding: 20px 25px;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #000;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+
+nav li a:hover {
+  background-color: #333;
+  color: #fff;
+}

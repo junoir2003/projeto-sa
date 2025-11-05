@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cadastro.css">
+  <title>Cadastro | BookFlow</title>
+</head>
+<body>
+  <header>
+    <h1>BookFlow</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="Login/index.html">Home</a></li>
+      <li><a href="pages/Login/login.html">Login</a></li>
+      <li><a href="pages/Livros/livros.html">Livros</a></li>
+      <li><a href="pages/Dashboard/dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <div id="containerCadastro">
+    <form>
+      <label>Nome:</label>
+      <input type="text" id="inputNome">
+
+      <label >Email:</label>
+      <input  id="inputEmail">
+
+      <label >Senha:</label>
+      <input id="inputSenha">
+
+      <label >Páginas Lidas:</label>
+      <input type="number" id="inputPaginas">
+
+      <button >Cadastrar</button>
+      <div id="cadastroOk"></div>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
