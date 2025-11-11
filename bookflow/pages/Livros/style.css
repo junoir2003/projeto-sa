@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     padding: 30px;
-    background-color: #000;
+    background-color: #1a1b1a;
     border-radius: 20px;
     width: 300px;
     margin: 50px auto;
@@ -73,4 +73,33 @@ nav li a {
 
 nav li a:hover {
   background-color: #333;
+}
+.card{
+  border: 1px solid #ffffff;
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+#painelLivros{
+ margin-top: 25px;
+ background-color: rgb(8, 8, 8);
+ min-height: 10px;
+ border-radius: 50px;
+}
+#listasLivros{
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+  min-height: 500px;
 }
