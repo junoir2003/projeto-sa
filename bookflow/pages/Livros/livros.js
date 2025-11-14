@@ -38,8 +38,8 @@ function mostrarOsLivros() {
         document.getElementById('listasLivros').innerHTML += `
         <div class="card"> <h3> ${livros[i].nome}</h3> 
         <p>Autor: ${livros[i].autor}</p>
-        <p>Autor: ${livros[i].genero}/<p>
-        <p>Autor: ${livros[i].paginas}</p>
+        <p>Genero: ${livros[i].genero}<p>
+        <p>Paginas: ${livros[i].paginas}</p>
         </div>
         `
     }

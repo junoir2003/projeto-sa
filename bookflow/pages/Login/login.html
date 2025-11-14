@@ -15,9 +15,9 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/Livros/livros.html">Livros</a></li>
-            <li><a href="pages/Dashboard/dashboard.html">Dashboard</a></li>
+            <li><a href="../Home/index.html">Home</a></li>
+            <li><a href="../Livros/livros.html">Livros</a></li>
+            <li><a href="../Login/login.html">Dashboard</a></li>
         </ul>
     </nav>
 
@@ -27,15 +27,17 @@
 
             <form id="formCadastro" >
                 <label for="inputEmail">Email:</label>
-                <input type="email" id="inputEmail">
-                <br><br>
+                <input type="email" id="emailUser">
+                
                 <label for="inputSenha">Senha:</label>
-                <input  id="inputSenha">
-                 <br><br>
-                <button onclick="cadastrarUsuario()" type="submit">Entrar</button>
+                <input  id="senhaUser">
+                   <p>Não possui cadastro ainda? Clique aqui <a href="../cadastro/cadastro.html">Cadastre-se</a></p>
+                
+                
+                <button onclick="LoginUsuario()" type="submit">Entrar</button>
             </form>
 
-            <div id="cadastroOk"></div>
+            
         </div>
     </main>
 

@@ -90,3 +90,6 @@ nav li a:hover {
 #containerLogin button:hover {
     background-color: gray;
 }
+a{
+    color: #fff;
+}

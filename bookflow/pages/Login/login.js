@@ -1,20 +1,20 @@
 const usuarios = []
 
-function cadastrarUsuario(){
-    let nomeUser = document.getElementById(`inputNome`).value
-    let emailUser = document.getElementById(`inputEmail`).value
-    let senhaUser = document.getElementById(`inputSenha`).value
-    let paginasUser = document.getElementById(`inputPaginas`).value
+function LoginUsuario(){
+   
+    const emailUser = document.getElementById(`emailUser`).value
+    const senhaUser = document.getElementById(`senhaUser`).value
 
-    let novoUsuario = {
-        nome: nomeUser,
-        email: emailUser,
-        senha: senhaUser,
-        paginas: paginasUser
+    const usuariosSalvo = JSON.parse(localStorage.getItem("usuariosSalvo"))
 
+    if(!usuariosSalvo){
+        alert("Nenhum usuario cadastrado")
+        return
+    }if(emailUser=== usuariosSalvo.emailUser && senhaUser === usuariosSalvo.senhaUser){
+        alert("deu boa")
+    } else{
+        alert("deu ruim")
     }
-
-    
 
     usuarios.push(novoUsuario)
    document.getElementById("cadastroOk").innerHTML = "Usuário " + nomeUser + " cadastrado com sucesso!"

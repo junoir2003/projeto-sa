@@ -9,7 +9,7 @@
   margin: 50px auto;
 }
 
-#containerCadastro form {
+#cardCadastro  {
   display: flex;
   flex-direction: column;
   gap: 15px; 
@@ -18,13 +18,13 @@
 
 
 
-#containerCadastro input {
+ input {
   padding: 8px;
   border: none;
   border-radius: 5px;
 }
 
-#containerCadastro button {
+ button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -35,7 +35,7 @@
   transition: background-color 0.3s;
 }
 
-#containerCadastro button:hover {
+ button:hover {
   background-color: gray;
 }
 

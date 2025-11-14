@@ -13,9 +13,25 @@ function cadastrarUsuario(){
         paginas: paginasUser
 
     }
-
     
+    localStorage.setItem("novoUsuario", JSON.stringify(novoUsuario))
+    alert("cadastrado")
+    window.location.href = "../login/login.html"
 
-    usuarios.push(novoUsuario)
-   document.getElementById("cadastroOk").innerHTML = "Usuário " + nomeUser + " cadastrado com sucesso!"
+    limpaCadastro()
+    console.log(novoUsuario)
+    
 }
+function limpaCadastro() {
+    document.getElementById(`inputNome`).value = ''
+    document.getElementById(`inputEmail`).value = ''
+    document.getElementById(`inputSenha`).value = ''
+    document.getElementById(`inputPaginas`).value = ''
+
+    document.getElementById('inputNome').focus()
+
+}
+
+
+
+

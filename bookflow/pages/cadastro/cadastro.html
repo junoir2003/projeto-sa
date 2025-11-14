@@ -13,15 +13,15 @@
 
   <nav>
     <ul>
-      <li><a href="Login/index.html">Home</a></li>
-      <li><a href="pages/Login/login.html">Login</a></li>
-      <li><a href="pages/Livros/livros.html">Livros</a></li>
-      <li><a href="pages/Dashboard/dashboard.html">Dashboard</a></li>
+      <li><a href="../Home/index.html">Home</a></li>
+      <li><a href="../Login/login.html">Login</a></li>
+      <li><a href="../Livros/livros.html">Livros</a></li>
+      <li><a href="../Dashboard/menu.html">Dashboard</a></li>
     </ul>
   </nav>
 
   <div id="containerCadastro">
-    <form>
+    <div id="cardCadastro">
       <label>Nome:</label>
       <input type="text" id="inputNome">
 
@@ -31,14 +31,14 @@
       <label >Senha:</label>
       <input id="inputSenha">
 
-      <label >Páginas Lidas:</label>
+      <label >Páginas Lidas por dia:</label>
       <input type="number" id="inputPaginas">
 
-      <button >Cadastrar</button>
+      <button onclick="cadastrarUsuario()">Cadastrar</button>
       <div id="cadastroOk"></div>
-    </form>
+    </div>
   </div>
 
-  <script src="login.js"></script>
+  <script src="cadastro.js"></script>
 </body>
 </html>
