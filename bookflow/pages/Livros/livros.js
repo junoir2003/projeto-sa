@@ -46,3 +46,6 @@ function mostrarOsLivros() {
         `;
     });
 }
+function navegar() {
+    window.location.href = "../Dashboard/menu.html";
+}
