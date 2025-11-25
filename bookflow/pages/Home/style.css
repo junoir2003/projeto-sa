@@ -46,3 +46,13 @@ nav li a:hover {
   background-color: #333; 
   color: #fff;
 }
+
+#titulo{
+  color: #000;
+}
+section{
+display: flex;
+  justify-content: center;
+  padding: 30px;
+ 
+}

@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./dashboard.css">
-     <title>Dashboard | BookFlow</title>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="dashboard.css">
+    <title>dashboard | BookFlow</title>
 </head>
+
 <body>
-     <header>
+    <header>
         <h1>BookFlow</h1>
     </header>
-
     <nav>
         <ul>
             <li><a href="../Home/index.html">Home</a></li>
-            <li><a href="../Livros/livros.html">Livros</a></li>
-            
+            <li><a href="../Login/login.html">Login</a></li>
+
         </ul>
     </nav>
-    <div>
-        <a href="">Livros</a>
-        <a href="">Livros</a>
-        <a href="">Livros</a>
+
+<section class="cards">
+    <div class="card">
+        <h2>Total de Livros</h2>
+        <p id="totalLivros">0</p>
     </div>
-        <div class="card">
-             <img src="./imagem/livro1.jpg" ></img>
-             <p></p>
-             <label>Paginas Lidas:</label><p></p>
-             <label>Situação:</label><p></p>
-             <label>Captulos:</label><p></p>
-        </div>
-        <p></p>
-         <div class="card2">
-            <img src="./imagem/livro2.jpg"></img>
-            <label>Paginas Lidas:</label><p></p>
-             <label>Situação:</label><p></p>
-             <label>Captulos:</label><p></p>
-        </div>
-        <p></p>
-         <div class="card3">
-            <img src="./imagem/livro3.jpg" ></img>
-            <p></p>
-             <label>Paginas Lidas:</label><p></p>
-             <label>Situação:</label><p></p>
-             <label>Captulos:</label><p></p>
-        </div>
-        <p></p>
-         <div class="card4">
-            <img src="./imagem/livro4.jpg" ></img>
-            <p></p>
-             <label>Paginas Lidas:</label><p></p>
-             <label>Situação:</label><p></p>
-             <label>Captulos:</label><p></p>
-        </div>
-        
-        </body>
+
+    <div class="card">
+        <h2>Total de Páginas</h2>
+        <p id="totalPaginas">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Dias Necessários</h2>
+        <p id="diasNecessarios">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Páginas Restantes</h2>
+        <p id="faltamPaginas">0</p>
+    </div>
+</section>
+
+<h2>Livros Cadastrados</h2>
+<ul id="listaLivros"></ul>
+
+<div id="calc">
+    <h2>Calculadora de Leitura</h2>
+    <label>Páginas por dia:</label>
+    <input type="number" id="paginasPorDia">
+    <button onclick="calcular()">Calcular</button>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
 </html>

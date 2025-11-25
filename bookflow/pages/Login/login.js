@@ -1,21 +1,23 @@
-const usuarios = []
-
 function LoginUsuario(){
-   
-    const emailUser = document.getElementById(`emailUser`).value
-    const senhaUser = document.getElementById(`senhaUser`).value
+    const emailUser = document.getElementById("emailUser").value
+    const senhaUser = document.getElementById("senhaUser").value
 
-    const usuariosSalvo = JSON.parse(localStorage.getItem("usuariosSalvo"))
+ 
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
 
-    if(!usuariosSalvo){
-        alert("Nenhum usuario cadastrado")
+    if(usuarios.length === 0){
+        alert("Nenhum usuário cadastrado!")
         return
-    }if(emailUser=== usuariosSalvo.emailUser && senhaUser === usuariosSalvo.senhaUser){
-        alert("deu boa")
-    } else{
-        alert("deu ruim")
     }
+    const usuarioEncontrado = usuarios.find(user => 
+        user.email === emailUser && user.senha === senhaUser
+    )
+    if(usuarioEncontrado){
+        alert("Login realizado com sucesso!")
+     window.location.href = "../dashboard/menu.html"
 
-    usuarios.push(novoUsuario)
-   document.getElementById("cadastroOk").innerHTML = "Usuário " + nomeUser + " cadastrado com sucesso!"
+    } else {
+        alert("Email ou senha incorretos!")
+    }
+    
 }

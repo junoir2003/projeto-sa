@@ -62,7 +62,7 @@ nav li a:hover {
   color: #fff;
 }
 
-#containerLogin form {
+#containerLogin  {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -92,4 +92,11 @@ nav li a:hover {
 }
 a{
     color: #fff;
+}
+#formCadastro{
+      display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 250px;
 }
