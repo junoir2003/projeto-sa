@@ -1,18 +1,19 @@
 let livros = JSON.parse(localStorage.getItem("livros")) || [];
 
-function cadastrarLivro(event) {
-    event.preventDefault();
+function cadastrarLivro() {
+    
 
-    let nomeLivro = document.getElementById("inputLivro").value;
-    let autorLivro = document.getElementById("inputAutor").value;
-    let generoLivro = document.getElementById("inputGenero").value;
-    let paginasLivro = document.getElementById("inputPaginas").value;
+    let nome = document.getElementById("inputLivro").value;
+    let autor = document.getElementById("inputAutor").value;
+    let genero = document.getElementById("inputGenero").value;
+    let paginas = document.getElementById("inputPaginas").value;
 
-    const novoLivro = {
-        nome: nomeLivro,
-        autor: autorLivro,
-        genero: generoLivro,
-        paginas: Number(paginasLivro)
+    let novoLivro = {
+        id:Date.now(),
+        nome: nome,
+        autor: autor,
+        genero: genero,
+        paginas: paginas
     };
 
     livros.push(novoLivro);
@@ -33,19 +34,68 @@ function limpaLivro() {
 }
 
 function mostrarOsLivros() {
-    document.getElementById("listasLivros").innerHTML = "";
-
-    livros.forEach(livro => {
+    livros = JSON.parse(localStorage.getItem('livros')) || []
+    document.getElementById("listasLivros").innerHTML = '';
+for(let i=0; i<livros.length; i++){
+ 
         document.getElementById("listasLivros").innerHTML += `
             <div class="card">
-                <h3>${livro.nome}</h3>
-                <p>Autor: ${livro.autor}</p>
-                <p>Gênero: ${livro.genero}</p>
-                <p>Páginas: ${livro.paginas}</p>
+            <p>ID: ${livros[i].id}</p>
+                <h3>${livros[i].nome}</h3>
+                <p>Autor: ${livros[i].autor}</p>
+                <p>Gênero: ${livros[i].genero}</p>
+                <p>Páginas: ${livros[i].paginas}</p>
+                 <button onclick="editarLivro(${livros[i].id})">📝</button>
             </div>
         `;
-    });
+
 }
+   
+}
+function editarLivro(id){
+    //console.log(id);
+    livros = JSON.parse(localStorage.getItem('livros')) || []
+
+    for(let i=0; i<livros.length; i++){
+        if(livros[i].id == id){
+            console.log(livros[i]);
+            document.getElementById('inputLivro').value = livros[i].nome
+            document.getElementById('inputAutor').value = livros[i].autor
+            document.getElementById('inputGenero').value = livros[i].genero
+            document.getElementById('inputPaginas').value = livros[i].paginas
+            idEditando = livros[i].id
+        }
+    }
+    
+}
+
+function salvaLivro(){
+    livros = JSON.parse(localStorage.getItem('livros')) || []
+    for(let i=0; i<livros.length; i++){
+        if(livros[i].id == idEditando){
+            console.log(livros[i]);
+            livros[i].nome = document.getElementById('inputLivro').value
+            livros[i].autor = document.getElementById('inputAutor').value
+             livros[i].genero = document.getElementById('inputGenero').value
+              livros[i].paginas = document.getElementById('inputPaginas').value
+        }
+    }
+    localStorage.setItem("livros", JSON.stringify(livros))
+    mostrarOsLivros()
+    alert("Alterado com muito sucesso")
+    limpaLivro()
+    idEditando = 0
+}
+function editar(id){
+    for(let i=0; i<livros.length; i++){
+        if(livros[i].id == id){
+            console.log(livros[i]);
+
+        }
+    }
+    
+}
+
 function navegar() {
     window.location.href = "../Dashboard/menu.html";
 }
