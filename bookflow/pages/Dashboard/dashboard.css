@@ -1,11 +1,13 @@
-
+body{
+  background-color:#f0e9d9;
+}
 #containerLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    background-color: black;
+    background-color:  #675647;
     color: white;
     padding: 30px;
     width: 300px;
@@ -23,7 +25,7 @@ h2 {
 }
 
 header {
-    background-color: #000000;
+    background-color:  #675647;
     padding: 20px 25px;
     margin: 10px 0 0 0;
     text-align: center;
@@ -34,7 +36,7 @@ header {
 }
 
 nav {
-  background-color: #000; 
+  background-color:  #675647; 
   padding: 10px 0;
 }
 
@@ -49,7 +51,7 @@ nav ul {
 nav li a {
   color: #fff; 
   text-decoration: none;
-  background-color: #000; 
+  background-color:  #675647; 
   padding: 8px 15px;
   border-radius: 5px; 
   transition: all 0.3s ease;
@@ -58,7 +60,7 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: #333; 
+  background-color: #866c55; 
   color: #fff;
 }
 .cards {
@@ -74,7 +76,7 @@ nav li a:hover {
     padding: 25px;
     width: 240px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px #0002;
+    box-shadow: 0 4px 8px #866c55;
     text-align: center;
     h2 {
     color: black
@@ -86,7 +88,7 @@ nav li a:hover {
     padding: 25px;
     width: 240px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px #0002;
+    box-shadow: 0 4px 8px #866c55;
     text-align: center;
     margin: 30px auto;
     display: block;
@@ -109,10 +111,6 @@ button {
     transition: background-color 0.3s;
 }
 }
-
-
-
-
 #livrosCadastrados {
     color: #000;
     display: flex;

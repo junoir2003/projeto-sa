@@ -45,10 +45,29 @@ for(let i=0; i<livros.length; i++){
                 <p>Autor: ${livros[i].autor}</p>
                 <p>Gênero: ${livros[i].genero}</p>
                 <p>Páginas: ${livros[i].paginas}</p>
-                 <button onclick="editarLivro(${livros[i].id})">📝</button>
+                 <button onclick="editarLivro(${livros[i].id})">Editar</button>
+                 <br>
+                 <button onclick="deletarLivro(${livros[i].id})">Deletar</button>
             </div>
         `;
 
+}
+function deletarLivro(id){
+    livros = JSON.parse(localStorage.getItem('livros')) || []
+
+    let livrosTemp = livros.filter((l) => l.id != id)
+    localStorage.setItem("livros", JSON.stringify(dinosTemp))
+
+    // for(i=0; i<dinossauros.length; i++){
+    //     if(dinossauros[i].id == id){
+    //         dinossauros.splice(i, 1)
+    //     }
+    // }
+    // localStorage.setItem("dinossauros", JSON.stringify(dinossauros))
+
+
+    mostrarTodosDinos()
+    alert("Deletadinho")
 }
    
 }
