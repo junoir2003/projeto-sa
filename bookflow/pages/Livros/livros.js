@@ -51,17 +51,18 @@ for(let i=0; i<livros.length; i++){
             </div>
         `
 }
+}
 
 function deletarLivro(id){
     livros = JSON.parse(localStorage.getItem('livros')) || []
     let livrosTemp = livros.filter((l) => l.id != id)
     localStorage.setItem("livros", JSON.stringify(livrosTemp))
 
-    mostrarTodosDinos()
+    mostrarOsLivros()
     alert("Livro deletado")
 }
-   
-}
+
+
 function editarLivro(id){
     livros = JSON.parse(localStorage.getItem('livros')) || []
 
@@ -95,6 +96,7 @@ function salvaLivro(){
     limpaLivro()
     idEditando = 0
 }
+
 function editar(id){
     for(let i=0; i<livros.length; i++){
         if(livros[i].id == id){
