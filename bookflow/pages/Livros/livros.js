@@ -49,24 +49,20 @@ for(let i=0; i<livros.length; i++){
                  <br>
                  <button onclick="deletarLivro(${livros[i].id})">Deletar</button>
             </div>
-        `;
-
+        `
 }
+
 function deletarLivro(id){
     livros = JSON.parse(localStorage.getItem('livros')) || []
-
     let livrosTemp = livros.filter((l) => l.id != id)
     localStorage.setItem("livros", JSON.stringify(livrosTemp))
 
-
-
     mostrarTodosDinos()
-    alert("Deletadinho")
+    alert("Livro deletado")
 }
    
 }
 function editarLivro(id){
-    //console.log(id);
     livros = JSON.parse(localStorage.getItem('livros')) || []
 
     for(let i=0; i<livros.length; i++){
