@@ -56,14 +56,8 @@ function deletarLivro(id){
     livros = JSON.parse(localStorage.getItem('livros')) || []
 
     let livrosTemp = livros.filter((l) => l.id != id)
-    localStorage.setItem("livros", JSON.stringify(dinosTemp))
+    localStorage.setItem("livros", JSON.stringify(livrosTemp))
 
-    // for(i=0; i<dinossauros.length; i++){
-    //     if(dinossauros[i].id == id){
-    //         dinossauros.splice(i, 1)
-    //     }
-    // }
-    // localStorage.setItem("dinossauros", JSON.stringify(dinossauros))
 
 
     mostrarTodosDinos()
